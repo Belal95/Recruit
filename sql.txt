@@ -1,0 +1,24 @@
+CREATE DATABASE recruit;
+CREATE TABLE users(
+    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NULL,
+    salary INT UNSIGNED NULL,
+    role VARCHAR(20) DEFAULT 'user',
+    gender VARCHAR(10),
+    location VARCHAR(20)
+);
+CREATE TABLE jobs(
+	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+	FOREIGN KEY(userID) REFERENCES users(ID) NOT NULL,
+	job_name VARCHAR(50) NOT NULL,
+	job_title VARCHAR(50) NOT NULL,
+	job_description text NOT NULL,
+	location VARCHAR(20) NOT NULL,
+	salary INT UNSIGNED NULL,
+	approved INT(1) DEFAULT 0,
+	available INT(1) DEFAULT 1
+);

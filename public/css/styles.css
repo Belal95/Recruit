@@ -1,0 +1,41 @@
+/*
+	LightRed = #EF233C
+*/
+/*Start main rules*/
+	body{
+		background: #e9ebee
+	}
+/*End main rules*/
+/*Start navbar*/
+	.navbar-inverse{
+		background: #fafafb;
+		border-color: #CF860E;
+		border-top: 3px solid #EF233C;
+		border-bottom: 0px solid ;
+		border-radius: 0;
+		box-shadow: 0 1px 0 rgba(12,13,14,0.15);
+	}
+	
+	.navbar-inverse .navbar-brand,
+	.navbar-inverse .navbar-brand:focus{color: #535a60}
+	
+	.navbar-inverse .navbar-brand:hover{color: #B20422}
+	
+	.navbar-inverse .navbar-nav>li>a{color: #535a60}
+	
+	.navbar-inverse .navbar-nav>li>a:focus{color: #B20422;}
+
+	.navbar-inverse .navbar-nav>li>a:hover{
+		background: #EF233C;	
+		border-bottom: 3px solid #EF233C;
+		transition: all 200ms;
+	}
+	
+	.navbar-inverse .navbar-nav>.active>a,
+	.navbar-inverse .navbar-nav>.active>a:focus,
+	.navbar-inverse .navbar-nav>.active>a:hover{
+		border-bottom: 3px solid #EF233C;
+		color: #0C0D0E;
+		background: #fafafb;
+	}
+/*End navbar*/
